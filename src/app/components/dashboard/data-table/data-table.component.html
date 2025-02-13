@@ -19,7 +19,7 @@
           <td class="text-start pl-1">{{ i + 1 }}</td>
           <td class="text-start pl-1">
             <ng-container *ngIf="editedId === +barangList.id; else notEditKode">
-              <input formControlName="kodeBarang" type="text" />
+              <input formControlName="kodeBarang" type="text" class="w-32" />
             </ng-container>
             <ng-template #notEditKode>
               <span>
@@ -29,7 +29,7 @@
           </td>
           <td class="text-start pl-1">
             <ng-container *ngIf="editedId === +barangList.id; else notEditNama">
-              <input formControlName="namaBarang" type="text" />
+              <input formControlName="namaBarang" type="text" class="w-32" />
             </ng-container>
             <ng-template #notEditNama>
               {{ barangList.namaBarang }}
@@ -37,7 +37,7 @@
           </td>
           <td class="text-start pl-1">
             <ng-container *ngIf="editedId === +barangList.id; else notEditStok">
-              <input formControlName="jumlahStok" type="number" />
+              <input formControlName="jumlahStok" type="number" class="w-32" />
             </ng-container>
             <ng-template #notEditStok>
               {{ barangList.jumlahStok }}
@@ -47,7 +47,7 @@
             <ng-container
               *ngIf="editedId === +barangList.id; else notEditHarga"
             >
-              <input formControlName="hargaSatuan" type="number" />
+              <input formControlName="hargaSatuan" type="number" class="w-32" />
             </ng-container>
             <ng-template #notEditHarga>
               {{ barangList.hargaSatuan }}
