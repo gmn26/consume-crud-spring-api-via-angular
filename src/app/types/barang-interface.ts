@@ -1,7 +1,7 @@
 export interface BarangResponse {
   id: String;
-  kodeBarang: String;
-  namaBarang: String;
+  kodeBarang: string;
+  namaBarang: string;
   jumlahStok: Number;
   hargaSatuan: Number;
   tanggalMasuk: Date;

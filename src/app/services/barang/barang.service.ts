@@ -28,6 +28,10 @@ export class BarangService {
     return this.httpClient.post(this.API_URI, body, { headers: this.headers });
   }
 
+  editBarang(id: Number, body: CreateBarangDto): Observable<any> {
+    return this.httpClient.put(`${this.API_URI}/${id}`, body, { headers: this.headers });
+  }
+
   deleteBarang(id: Number): Observable<any> {
     return this.httpClient.delete(`${this.API_URI}/${id}`, { headers: this.headers });
   }
