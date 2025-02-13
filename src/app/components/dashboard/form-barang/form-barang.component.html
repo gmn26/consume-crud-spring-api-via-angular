@@ -1,0 +1,20 @@
+<form
+  [formGroup]="barangForm"
+  (submit)="addBarangAction()"
+  class="flex flex-col gap-3"
+>
+  <input formControlName="kodeBarang" type="text" placeholder="Kode Barang" />
+  <input formControlName="namaBarang" type="text" placeholder="Nama Barang" />
+  <input formControlName="jumlahStok" type="number" placeholder="Jumlah Stok" />
+  <input
+    formControlName="hargaSatuan"
+    type="number"
+    placeholder="Harga Satuan"
+  />
+  <button
+    type="submit"
+    class="bg-gradient-to-tr from-[#ED0B57] to-[#8C11EF] text-white py-1 rounded w-full flex justify-center items-center"
+  >
+    Add Barang
+  </button>
+</form>

@@ -1,0 +1,14 @@
+<form
+  [formGroup]="loginForm"
+  (submit)="loginAction()"
+  class="flex flex-col gap-3 mt-5"
+>
+  <input formControlName="username" type="text" placeholder="Username" />
+  <input formControlName="password" type="password" placeholder="Password" />
+  <button
+    type="submit"
+    class="bg-green-300 py-1 rounded w-full flex justify-center items-center"
+  >
+    Login
+  </button>
+</form>

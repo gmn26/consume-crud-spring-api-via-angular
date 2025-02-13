@@ -1,0 +1,41 @@
+<main class="flex flex-col items-center">
+  <div
+    class="bg-gradient-to-tr from-[#ED0B57] to-[#8C11EF] text-white w-4xl flex flex-col justify-center items-center h-40 rounded-b-xl gap-2"
+  >
+    <span class="text-xl font-bold">Angular Dummy Project</span>
+    <span class="text-sm font-light"
+      >By.
+      <a href="https://github.com/gmn26" target="_blank">GMN26</a>
+    </span>
+  </div>
+  <div class="flex gap-3 w-4xl mt-4">
+    <aside>
+      <ul
+        class="*:rounded flex flex-col gap-2 *:**:px-2 *:*:py-1 *:*:cursor-pointer *:bg-gradient-to-tr *:p-[2px] *:from-[#ED0857] *:to-[#8C11EF] *:*:w-full *:*:h-full"
+      >
+        <li class="">
+          <button
+            (click)="changeContent('List')"
+            [ngClass]="active !== 'List' ? 'bg-white' : 'text-white'"
+          >
+            List Barang
+          </button>
+        </li>
+        <li>
+          <button
+            (click)="changeContent('Add')"
+            [ngClass]="active !== 'Add' ? 'bg-white' : 'text-white'"
+          >
+            Tambah Barang
+          </button>
+        </li>
+      </ul>
+    </aside>
+    <div class="grow" *ngIf="active === 'List'">
+      <app-data-table />
+    </div>
+    <div class="grow" *ngIf="active === 'Add'">
+      <app-form-barang />
+    </div>
+  </div>
+</main>
