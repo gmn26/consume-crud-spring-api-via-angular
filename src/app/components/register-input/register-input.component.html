@@ -1,0 +1,19 @@
+<form
+  [formGroup]="registerForm"
+  (submit)="registerAction()"
+  class="flex flex-col gap-3 mt-5"
+>
+  <input formControlName="name" type="text" placeholder="Name" />
+  <input formControlName="username" type="text" placeholder="Username" />
+  <input formControlName="password" type="password" placeholder="Password" />
+  <select formControlName="role" class="border rounded">
+    <option value="Admin" selected>Admin</option>
+    <option value="User">User</option>
+  </select>
+  <button
+    type="submit"
+    class="bg-green-300 py-1 rounded w-full flex justify-center items-center"
+  >
+    Register
+  </button>
+</form>
